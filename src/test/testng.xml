@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Smoke Test" verbose="1">
+
+    <test name="Ui Tests">
+        <classes>
+            <class name="Tests.AlertsTest">
+                <methods>
+                    <include name="verifyJsAlert"/>
+                    <include name="verifyJsPrompt"/>
+                </methods>
+            </class>
+            <class name="Tests.FormAuthTest"/>
+
+            <class name="Tests.DropdownTest">
+                <methods>
+                    <exclude name="verifyDropdownOption1"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+
+
+
+</suite>
